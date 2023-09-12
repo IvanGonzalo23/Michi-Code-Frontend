@@ -1,0 +1,205 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #FFFFFF;
+    font-size: 17px;
+    width: 100%;
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+    font-family: "Cambria";
+}
+
+body {
+    background-color: #36393E;
+    font-family: "Arial";
+}
+
+.rectangulo {
+    background-color: transparent;
+    padding: 20px;
+    border: 3px solid #000;
+    box-shadow: 0 0 10px rgba(156, 149, 149, 0.1);
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 20%;
+    margin-top: 30px;
+    width: 550px;
+    height: 550px;
+    transition: transform 0.3s ease;
+}
+
+#p{
+    position: relative;
+    right: 360px;
+    top: 130px;
+    color: #B9BBBE;
+}
+a{
+    color: #677BC4;
+}
+h1 {
+    position: relative;
+    top: -5px;
+    color: #B9BBBEff;
+    font-size: 27px;
+}
+
+.formulario{
+    padding: 0;
+    margin: 0;
+    margin-block: 10px;
+}
+
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+/* Estilos para las etiquetas */
+.campo label {
+    position: relative;
+    color: #B9BBBE;
+    left: 130px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+
+/* Estilos para el input */
+.campo input {
+    position: relative;
+    left: 130px;
+    width: 50%;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: #232527;
+    color:#B9BBBE ;
+    /* Fondo transparente */
+
+    /* Color de texto blanco */
+    transition: background-color 0.3s ease, transform 0.3s ease, font-size 0.3s ease;
+    /* Transiciones para el input */
+}
+
+.campo input:hover {
+    /* Cambio de color morado al pasar el mouse */
+    transform: scale(1.05);
+    /* Efecto de agrandamiento al pasar el mouse */
+    font-size: 1.1rem;
+    /* Tamaño de fuente ligeramente más grande al pasar el mouse */
+}
+
+
+/* Estilos para los campos de entrada */
+.campo input,
+.campo select {
+
+    position:relative;
+    left:130px;
+    width: 50%;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+.fecha-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fecha-select {
+    width: 30%;
+    /* Ajusta el ancho según tus preferencias */
+}
+
+
+footer {
+    position: absolute;
+    /* Color de fondo del footer */
+    color: #fff;
+    /* Color de texto del footer */
+    
+    left: 0px;
+    bottom: -60px;
+    padding: 10px 0;
+}
+
+
+
+
+#dia {
+    width: 100px;
+    border-radius: 7px;
+    height: 35px;
+    /* Ancho deseado */
+    border: 2px solid black;
+    /* Borde negro */
+}
+
+/* Estilos para el segundo select */
+#mes {
+    width: 100px;
+    border-radius: 7px;
+    height: 35px;
+    /* Ancho deseado */
+    border: 2px solid black;
+    /* Borde negro */
+}
+
+/* Estilos para el tercer select */
+#ano {
+    width: 100px;
+    border-radius: 7px;
+    height: 35px;
+    /* Ancho deseado */
+    border: 2px solid black;
+    /* Borde negro */
+}
+
+/* Estilos adicionales para el select */
+select {
+    background-color: #232527;
+    display:inline-block;
+    margin-right: 20px;
+    color: #B9BBBE;
+        /* Espacio entre los selects */
+    margin-bottom: 10px;
+    /* Ajusta el ancho según tus preferencias */
+    /* Estilos del borde */
+    padding: 15px;
+    /* Espacio interno del select */
+}
+
+
+
+select:hover {
+    transform: scale(1.05);
+    /* Efecto de agrandamiento al pasar el mouse */
+    font-size: 1.1rem;
+}
+
+button {
+    position: relative;
+    width: 370px;
+    height: 40px;
+    background-color: #7289DA;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    padding: 5px 20px;
+    cursor: pointer;
+    left: 25px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #677BC4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: white;
+    /* Color de fondo relacionado con Discord */
+    font-size: 17px;
+    width: 100%;
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+    font-family: "Comic Sans MS";
+}
+
+body {
+    background-color: #36393E;
+    /* Color de fondo relacionado con Discord */
+    font-family: "Arial", sans-serif;
+    /* Fuente más moderna */
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    top: 220px;
+}
+
+.welcome-text {
+    opacity: 0;
+    animation: appear 3s ease forwards;
+    font-size: 2rem;
+    /* Tamaño de fuente más grande */
+    color: #7289DA;
+    /* Color relacionado con Discord */
+}
+
+
+@keyframes appear {
+    to {
+        opacity: 1;
+    }
+}
+
+.start-button {
+    background-color: #7289DA;
+    color: white;
+    position: relative;
+    top: 200px;
+    font-size: 1.5rem;
+    border-top: 3px #000 solid;
+    border-right: 3px #000 solid;
+    border-bottom: 3px #000 solid;
+    border-left: 2px #000 solid;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Agregamos transiciones para background-color y box-shadow */
+}
+
+.start-button:hover {
+    background-color: #677BC4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style_login.css"> <!--cambiar a {{ url_for('static', filename=css/style_login.css') }}"-->
+    <title>Michi Code</title>
+</head>
+<body>
+    <header>
+        <p><b>michi code</p>
+    </header>
+    <div class="cuadrado">
+        <div class="cuerpo">
+            <h1>Iniciar sesión</h1>
+            <form method="POST" action="http://127.0.0.1:5000/login">
+                <label class="correo">Correo electrónico o Nombre de usuario</label>
+                <input class="ic" type="text" name="email_username" required>
+                <label class="contrasenia">Contraseña</label>
+                <input class="ci" type="password" name="contrasenia" required>
+                <button type="submit">Confirmar</button>
+            </form>
+            <p>¿No tienes una cuenta? <a href="form.html">Registrarse</a></p> <!--cambiar a {{url_for("auth.form")}} para conectarse a la api"-->
+        </div> 
+    </div>
+</body>
+</html>

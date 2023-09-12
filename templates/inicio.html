@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/css/style_inicio.css">  <!--cambiar a {{ url_for('static', filename='css/style_inicio.css') }}"-->
+        <title>Michi Code</title>
+    </head>
+    <header>
+        <p><b>
+            michi code
+        </p>
+    </header>
+
+    <body>
+        <div class="seccion-lateral">
+            <button id="crearServidorBtn" class="crear">
+                <img src="../static/assets/agregar3.png" alt="Agregar">  <!--cambiar a {{ url_for('static', filename=assests/agregar.png') }}"-->
+            </button>
+            
+            <img src="../static/assets/brujula.png" alt="Buscador" class="buscador"> <!--cambiar a {{ url_for('static', filename=assests/brujula.png') }}"-->
+            <hr class="linea">
+            </div>
+        </div>
+
+
+         <!-- Ventana modal -->
+        <div id="crearServidorModal" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar" id="cerrarModal">&times;</span>
+                <h2>Crear un nuevo servidor</h2>
+                <p>Introduce el nombre del servidor:</p>
+                <input type="text" id="nombreServidor">
+                <button id="guardarServidorBtn">Guardar</button>
+            </div>
+        </div>
+
+
+
+        <div class="seccion-principal">
+            <p>
+                Aún no te has unido a un servidor 
+            </p>
+
+            <p>
+                Intenta buscar uno o crea uno propio
+            </p>
+            <img src="../static/assets/imagen1.png" alt="Gato esperando"> <!--cambiar a {{ url_for('static', filename=assests/imagen1.png') }}"-->
+
+        </div>
+        <script src="../static/js/modal.js"></script> <!--cambiar a {{ url_for('static', filename=js/modal.js') }}"-->
+    </body>
+
+</html>

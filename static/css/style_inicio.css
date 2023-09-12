@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: white;
+    font-size: 17px;
+    width: 100%;
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+    position: relative;
+        /* Agrega posición relativa para controlar z-index */
+    z-index: 2;
+        /* Coloca el encabezado en un nivel superior */
+    font-family: "Comic Sans MS";
+    
+}
+
+body {
+    background-color: #36393E;
+    
+}
+
+.linea{
+    position: relative;
+    border: none;
+    height: 3px;
+    width: 88%;
+    background-color: black;
+    right: 30%;
+    transform: rotate(90deg);    
+}
+
+
+
+.seccion-lateral a{
+    background-color: transparent;
+    color: transparent;
+}
+
+
+/* Estilo para el botón */
+.crear {
+    mix-blend-mode: multiply;
+    position: relative;
+    left: 75px;
+    top: 90px;
+    transform: translate(-50%, -50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo para la imagen dentro del botón */
+.crear img {
+    width: 100%;
+    /* Ajusta el tamaño de la imagen según el botón */
+    height: auto;
+    /* Asegura que la imagen mantenga su proporción original */
+    max-width: 64px;
+    /* Cambia esto según el tamaño deseado */
+}
+
+
+
+.buscador{
+    mix-blend-mode: multiply;
+    position: relative;
+    left: 8px;
+    top: 180px;
+    transform: translate(-50%, -50%);
+}
+
+
+.seccion-principal img{
+    mix-blend-mode: multiply;
+    max-width: 200px;
+    max-height: 200px;
+    position: relative;
+    left: 750px;
+    top: 180px;
+    transform: translate(-50%, -50%);
+}
+
+.seccion-principal p{
+    margin:40px;
+    background-color: transparent;
+    position: relative;
+    width: 500px;
+    height: auto;
+    font-size: 27px;
+    left: 500px;
+    top: 90px;
+    font-family: "Comic Sans MS";
+
+}
+
+.modal-fondo {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo difuminado */
+    z-index: 3;
+    /* Asegura que esté por encima de otros elementos */
+}
+
+/* Estilo para la ventana modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 4;
+    /* Asegura que esté por encima de otros elementos */
+}
+
+/* Estilo para el botón de cierre */
+.cerrar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
