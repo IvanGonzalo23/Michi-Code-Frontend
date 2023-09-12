@@ -14,8 +14,8 @@ En donde nuestra mision como equipo sera hacer una pagina semejante al sitio web
 
 # Integrantes del proyecto
 
-* [Ivan Mendoza](alzabet-ivang@hotmail.com)
-* [Naira Leal](nairalealmk@gmail.com)
+* [Ivan Mendoza](https://github.com/IvanGonzalo23)
+* [Naira Leal](https://github.com/Naikl12)
 
 # Pantalla de inicio (en desarrollo)
 [![index.png](https://i.postimg.cc/8zG15jtc/index.png)](https://postimg.cc/pp0NcXNM)
