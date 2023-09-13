@@ -1,11 +1,13 @@
 // Función para abrir la ventana modal
 function abrirModal() {
     crearServidorModal.style.display = 'block';
+    const cerrarModalElement = document.getElementById('cerrarModal');
+    cerrarModalElement.addEventListener('click', cerrarModal);
 }
 
 // Función para cerrar la ventana modal
 function cerrarModal() {
-    console.log('Cerrando modal'); // Agrega este console.log para verificar
+    console.log('Cerrando modal');
     crearServidorModal.style.display = 'none';
 }
 
@@ -13,23 +15,16 @@ function cerrarModal() {
 crearServidorBtn.addEventListener('click', abrirModal);
 
 // Evento para cerrar la ventana modal al hacer clic en la "X"
-cerrarModal.addEventListener('click', cerrarModal);
+cerrarModalElement.addEventListener('click', cerrarModal);
 
 // Evento para cerrar la ventana modal al hacer clic en el fondo difuminado
-modalFondo.addEventListener('click', cerrarModal);
+modalFondo.addEventListener('click', function (event) {
+    if (event.target === modalFondo) {
+        cerrarModal();
+    }
+});
 
 // Evita que el clic dentro de la ventana modal la cierre
 crearServidorModal.addEventListener('click', function (event) {
     event.stopPropagation();
-});
-
-// Agregar funcionalidad para guardar el nombre del servidor en la base de datos
-guardarServidorBtn.addEventListener('click', function () {
-    const nombreServidor = document.getElementById('nombreServidor').value;
-    
-    // Envía el nombre del servidor a tu backend para guardarlo en la base de datos
-    // ... (puedes usar AJAX, fetch, o cualquier otro método)
-    
-    // Cierra la ventana modal después de guardar
-    cerrarModal();
 });
