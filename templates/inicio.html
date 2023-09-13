@@ -30,9 +30,11 @@
             <div class="modal-contenido">
                 <span class="cerrar" id="cerrarModal">&times;</span>
                 <h2>Crear un nuevo servidor</h2>
-                <p>Introduce el nombre del servidor:</p>
-                <input type="text" id="nombreServidor">
-                <button id="guardarServidorBtn">Guardar</button>
+                <form id="crearServidorForm" method="POST" action="/inicio">
+                    <p>Introduce el nombre del servidor:</p>
+                    <input type="text" id="nombreServidor" name="nombreServidor" placeholder="Nombre del servidor">
+                    <button type="submit" id="guardarServidorBtn">Guardar</button>
+                </form>
             </div>
         </div>
 
