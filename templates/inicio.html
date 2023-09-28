@@ -14,7 +14,7 @@
     <nav class="nav-servers">
         <ul>
             <li class="nav-servers_logo circle_button">
-                <a href="">
+                <a href="#">
                     <svg height="30px" width="30px" fill="currentColor" version="1.1" id="_x32_"
                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         viewBox="0 0 512 512">
@@ -43,14 +43,14 @@
                 </a>
             </li>
             <li class="nav-servers_logo ">
-                <a href="">
+                <a href="#">
                     <picture>
                         <img src="{{url_for("static", filename="assets/avatar_girl.png")}}" alt="imagen del servidor">
                     </picture>
                 </a>
             </li>
             <li class="nav-servers_logo">
-                <a href="">
+                <a href="#" >
                     <picture>
                         <img src="{{url_for("static", filename="assets/avatar_boy.png")}}" alt="imagen del servidor">
                     </picture>
@@ -89,12 +89,11 @@
 
             <!-- Lista de canales -->
             <div class="sidebar-channels_list">
-                <div class="channels_list_item flex-center" onclick="openNav()">
+                <div class="channels_list_item flex-center">
                     <div class="channels_logo flex-center">
                         <svg height="25px" width="25px" fill="currentColor" version="1.1" id="_x32_"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             viewBox="0 0 512 512" xml:space="preserve">
-
                             <g>
                                 <path class="st0" d="M205.116,153.078c31.534,11.546,69.397-12.726,84.58-54.209c15.174-41.484,1.915-84.462-29.614-96.001
                         		c-31.541-11.53-69.4,12.735-84.582,54.218C160.325,98.57,173.584,141.548,205.116,153.078z" />
@@ -114,9 +113,9 @@
                     </div>
                     <h2 class="fs-1">Michi Code</h2>
                 </div>
-                <div class="channels_add flex-center">
+                <div class="channels_add flex-center" onclick = "openNavCreateCanal()">
                     <h3>CANALES DIRECTOS</h3>
-                    <div class="channels_logo flex-center">
+                    <div class="channels_logo flex-center" >
                         <picture>
                             <svg width="12" height="12" viewBox="0 0 14 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -126,12 +125,15 @@
                         </picture>
                     </div>
                 </div>
+                <div class="channels_add flex-center" onclick = "openNavCanal()">
+                    <h3>CANALES</h3>
+                </div>
             </div>
 
             <!-- Pie de la lista de canales -->
             <div class="sidebar-channels_footer flex-center">
                 <!-- Boton de avatar del usuario-->
-                <div class="flex-center mx-1">
+                <div class="flex-center mx-1" onclick = "openNavPerfil()">
                     <!-- Imagen del avatar -->
                     <div class="circle_button channels_logo flex-center">
                         <div class="mg-1 ">
@@ -172,18 +174,78 @@
             </div>
         </section>
 
-        <!-- Contenido del canal-->
+        <!-- Contenido a mostrar -->
         <section id="container-extend" class="channel-content">
             <div class="channel-btn">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             </div>
             <div class="channel-container">
-                <!-- Area del contenido seleccionado a mostrar -->
-                <div class="channel-content_chat-area">
+                <!-- Mensaje de espera -->
+                <div id="container-cat-sad" class="channel-content_chat-area">
                     <picture>
                         <img src="{{url_for("static", filename="assets/sad_cat.png")}}" alt="gato triste">
                     </picture>
                     <p>El michi está esperando a los amigos. ¡Sin embargo, no tienes que hacerlo!</p>
+                </div>
+
+                <!-- Formulario para crear canal -->
+                <div id="create-channel" class="create-channel">
+                    <h2>Crear un nuevo canal</h2>
+                    <form id="crearCanalForm" method="POST" action="/inicio">
+                        <input type="text" id="nombreCanal" name="nombreServidor" placeholder="Nombre del servidor">
+                        <button type="submit" id="guardarCanalBtn" class="guardarServidorBtn">Guardar</button>
+                    </form>
+                </div>
+                <!-- Chat del canal seleccionado -->
+                <div id="container-chat-channel" class="chat-area">
+                    <div class="chat">
+                        <h3 class="mx-1">Nombre de usuario</h3>
+                        <p class="mx-1">Mensaje del usuario</p>
+                    </div>
+                    <div class="chat">
+                        <h3 class="mx-1">Nombre de usuario</h3>
+                        <p class="mx-1">Mensaje del usuario</p>
+                    </div>
+                    <!-- Aqui deberian generarse con js mas divs que contengan los mensajes que se envian-->
+                    <!-- Formulario para escribir y enviar mensaje al chat-->
+                    <form class="mx-1" id="crearMensajeForm" method="POST" action="/inicio">
+                        <input type="text" id="mensaje" name="mensaje" placeholder="Escribe aqui tu mensaje...">
+                        <button type="submit" id="enviarMensajeBtn" class="enviarMensajeBtn">ENVIAR</button>
+                    </form>
+                </div>
+                <!-- Ver perfil-->
+                <div id="perfil" class="perfil ">
+                    <h2>Mi perfil</h2>
+                    <div>
+                        <div>
+                            <picture class="circle_button channels_logo flex-center">
+                                <img src="{{url_for("static", filename="assets/avatar_boy.png")}}" alt="imagen del servidor">
+                            </picture>
+                            <h3>Nombre de usario</h3>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Nombre de usario</th>
+                                        <td>Luchi</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Nombre</th>
+                                        <td>Lucia</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Apellido</th>
+                                        <td colspan="2">Galán</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Correo electrónico</th>
+                                        <td colspan="2">luchi_galan@gmail.com</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

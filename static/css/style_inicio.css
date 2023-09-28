@@ -136,6 +136,10 @@ button {
 
 /*Boton agregar canales*/
 .channels_add {
+    cursor: pointer;
+}
+
+.channels_add {
     justify-content: space-between;
     font-size: 1.1rem;
 }
@@ -264,4 +268,26 @@ button {
     cursor: pointer;
     font-size: 16px;
     margin-right: 10px;
+}
+
+/* Divs que se muestran y ocultan */
+
+.chat-area,
+.create-channel {
+    display: none;
+}
+
+.chat-area {
+    align-items: center;
+    justify-content: center;
+}
+
+.chat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.perfil {
+    display: none;
 }
