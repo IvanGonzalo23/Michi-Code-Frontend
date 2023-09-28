@@ -2,7 +2,10 @@
 function abrirModal() {
     crearServidorModal.style.display = 'block';
     const cerrarModalElement = document.getElementById('cerrarModal');
+    const cerrarbtnModalElement = document.getElementById("cerrarBtnModal")
     cerrarModalElement.addEventListener('click', cerrarModal);
+    cerrarbtnModalElement.addEventListener("click", cerrarModal)
+
 }
 
 // Función para cerrar la ventana modal
@@ -28,3 +31,13 @@ modalFondo.addEventListener('click', function (event) {
 crearServidorModal.addEventListener('click', function (event) {
     event.stopPropagation();
 });
+
+
+// Efecto de movimiento al abrir el contenido de un canal
+function openNav() {
+    document.getElementById("container-extend").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("container-extend").style.width = "0";
+}

@@ -1,45 +1,26 @@
-* {
-    padding: 0;
-    margin: 0;
-}
+@import url('style_login.css');
 
-header {
-    background-color: #FFFFFF;
-    font-size: 17px;
-    width: 100%;
-    border-top: 5px solid #000;
-    border-bottom: 5px solid #000;
-    font-family: "Cambria";
-}
-
-body {
-    background-color: #36393E;
-    font-family: "Arial";
+.cont-form {
+    background-color: #4F545C;
 }
 
 .rectangulo {
-    background-color: transparent;
+    background-color: #202225;
     padding: 20px;
-    border: 3px solid #000;
-    box-shadow: 0 0 10px rgba(156, 149, 149, 0.1);
     text-align: center;
     margin-left: 30%;
     margin-right: 20%;
-    margin-top: 30px;
     width: 550px;
     height: 550px;
-    transition: transform 0.3s ease;
 }
 
-#p{
+#p {
     position: relative;
     right: 360px;
     top: 130px;
     color: #B9BBBE;
 }
-a{
-    color: #677BC4;
-}
+
 h1 {
     position: relative;
     top: -5px;
@@ -47,7 +28,7 @@ h1 {
     font-size: 27px;
 }
 
-.formulario{
+.formulario {
     padding: 0;
     margin: 0;
     margin-block: 10px;
@@ -79,8 +60,8 @@ h1 {
     width: 50%;
     padding: 5px;
     border-radius: 2px;
-    background-color: #232527;
-    color:#B9BBBE ;
+    background-color: #4F545C;
+    color: #B9BBBE;
     /* Fondo transparente */
 
     /* Color de texto blanco */
@@ -101,8 +82,8 @@ h1 {
 .campo input,
 .campo select {
 
-    position:relative;
-    left:130px;
+    position: relative;
+    left: 130px;
     width: 50%;
     padding: 5px;
     border: 1px solid transparent;
@@ -125,10 +106,10 @@ footer {
     /* Color de fondo del footer */
     color: #fff;
     /* Color de texto del footer */
-    
+
     left: 0px;
-    bottom: -60px;
-    padding: 10px 0;
+    bottom: -40px;
+    padding: 10px 10px;
 }
 
 
@@ -139,8 +120,7 @@ footer {
     border-radius: 7px;
     height: 35px;
     /* Ancho deseado */
-    border: 2px solid black;
-    /* Borde negro */
+    background-color: #36393F;
 }
 
 /* Estilos para el segundo select */
@@ -149,8 +129,7 @@ footer {
     border-radius: 7px;
     height: 35px;
     /* Ancho deseado */
-    border: 2px solid black;
-    /* Borde negro */
+    background-color: #36393F;
 }
 
 /* Estilos para el tercer select */
@@ -159,17 +138,16 @@ footer {
     border-radius: 7px;
     height: 35px;
     /* Ancho deseado */
-    border: 2px solid black;
-    /* Borde negro */
+    background-color: #36393F;
 }
 
 /* Estilos adicionales para el select */
 select {
     background-color: #232527;
-    display:inline-block;
+    display: inline-block;
     margin-right: 20px;
     color: #B9BBBE;
-        /* Espacio entre los selects */
+    /* Espacio entre los selects */
     margin-bottom: 10px;
     /* Ajusta el ancho según tus preferencias */
     /* Estilos del borde */
