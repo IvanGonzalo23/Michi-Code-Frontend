@@ -66,6 +66,11 @@ button {
     align-items: center;
 }
 
+.flex-center-x {
+    display: flex;
+    justify-content: center;
+}
+
 .mg-1 {
     margin: 0.5em;
 }
@@ -73,6 +78,11 @@ button {
 .mx-1 {
     margin-left: 0.5em;
     margin-right: 0.5em;
+}
+
+.my-1 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .fs-1 {
@@ -278,16 +288,46 @@ button {
 }
 
 .chat-area {
-    align-items: center;
-    justify-content: center;
+    display: none;
+    height: 70vh;
+    align-items: end;
 }
 
 .chat {
     display: flex;
     align-items: center;
+    justify-content: end;
+    width: 85%;
+}
+
+.input-width {
+    font-size: 1.5em;
+    width: 70%;
+}
+
+.form-enviar {
+    display: flex;
     justify-content: center;
 }
 
 .perfil {
     display: none;
+}
+
+
+.text-end {
+    width: 200px;
+    text-align: end;
+}
+
+.create-channel {
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-canal {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    align-items: center;
 }

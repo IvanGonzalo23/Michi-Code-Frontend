@@ -41,7 +41,6 @@ function openNav() {
 function closeNav() {
     document.getElementById("container-extend").style.width = "0";
 }
-
 function openNavCreateCanal() {
     document.getElementById("container-extend").style.width = "100%";
     document.getElementById("container-cat-sad").style.display = "none";
@@ -60,7 +59,7 @@ function openNavCanal() {
     document.getElementById("container-extend").style.width = "100%";
     document.getElementById("container-cat-sad").style.display = "none";
     document.getElementById("create-channel").style.display = "none";
-    document.getElementById("container-chat-channel").style.display = "block";
+    document.getElementById("container-chat-channel").style.display = "grid";
     document.getElementById("perfil").style.display = "none";
 }
 

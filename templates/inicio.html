@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_inicio.css') }}">
+    <link rel="stylesheet" href="../static/css/style_inicio.css">
     <title>Michi Code</title>
     
 </head>
@@ -45,14 +45,14 @@
             <li class="nav-servers_logo ">
                 <a href="#">
                     <picture>
-                        <img src="{{url_for("static", filename="assets/avatar_girl.png")}}" alt="imagen del servidor">
+                        <img src="../static/assets/avatar_girl.png" alt="imagen del servidor">
                     </picture>
                 </a>
             </li>
             <li class="nav-servers_logo">
                 <a href="#" >
                     <picture>
-                        <img src="{{url_for("static", filename="assets/avatar_boy.png")}}" alt="imagen del servidor">
+                        <img src="../static/assets/avatar_boy.png" alt="imagen del servidor">
                     </picture>
                 </a>
             </li>
@@ -183,16 +183,15 @@
                 <!-- Mensaje de espera -->
                 <div id="container-cat-sad" class="channel-content_chat-area">
                     <picture>
-                        <img src="{{url_for("static", filename="assets/sad_cat.png")}}" alt="gato triste">
+                        <img src="../static/assets//sad_cat.png" alt="gato triste">
                     </picture>
                     <p>El michi está esperando a los amigos. ¡Sin embargo, no tienes que hacerlo!</p>
                 </div>
-
                 <!-- Formulario para crear canal -->
-                <div id="create-channel" class="create-channel">
-                    <h2>Crear un nuevo canal</h2>
-                    <form id="crearCanalForm" method="POST" action="/inicio">
-                        <input type="text" id="nombreCanal" name="nombreServidor" placeholder="Nombre del servidor">
+                <div class="create-channel" id="create-channel" class="create-channel">
+                    <h2 class="mg-1">Crear un nuevo canal</h2>
+                    <form class="form-canal mg-1" id="crearCanalForm" method="POST" action="/inicio">
+                        <input class="input-width mg-1 " type="text" id="nombreCanal" name="nombreServidor" placeholder="Nombre del servidor">
                         <button type="submit" id="guardarCanalBtn" class="guardarServidorBtn">Guardar</button>
                     </form>
                 </div>
@@ -208,49 +207,56 @@
                     </div>
                     <!-- Aqui deberian generarse con js mas divs que contengan los mensajes que se envian-->
                     <!-- Formulario para escribir y enviar mensaje al chat-->
-                    <form class="mx-1" id="crearMensajeForm" method="POST" action="/inicio">
-                        <input type="text" id="mensaje" name="mensaje" placeholder="Escribe aqui tu mensaje...">
-                        <button type="submit" id="enviarMensajeBtn" class="enviarMensajeBtn">ENVIAR</button>
+                    <form class="form-enviar mx-1" id="crearMensajeForm" method="POST" action="/inicio">
+                        <input class="input-width" type="text" id="mensaje" name="mensaje" placeholder="Escribe aqui tu mensaje...">
+                        <button class="mx-1" type="submit" id="enviarMensajeBtn" class="enviarMensajeBtn">ENVIAR</button>
                     </form>
                 </div>
                 <!-- Ver perfil-->
                 <div id="perfil" class="perfil ">
-                    <h2>Mi perfil</h2>
+                    <h2 class="flex-center-x">Mi perfil</h2>
                     <div>
-                        <div>
-                            <picture class="circle_button channels_logo flex-center">
-                                <img src="{{url_for("static", filename="assets/avatar_boy.png")}}" alt="imagen del servidor">
+                        <div class="flex-center-x">
+                            <picture class="circle_button channels_logo flex-center mx-1 my-1">
+                                <img src="../static/assets//avatar_boy.png" alt="imagen del servidor">
                             </picture>
-                            <h3>Nombre de usario</h3>
+                            <h3 class="flex-center">Nombre de usario</h3>
                         </div>
-                        <div>
-                            <table class="table">
-                                <tbody>
+                        <div class="flex-center-x">
+                            <table>
+                                <tbody class="tabla-perfil">
                                     <tr>
-                                        <th scope="row">Nombre de usario</th>
+                                        <th class="text-end">Nombre de usario: </th>
                                         <td>Luchi</td>
+                                        <td class="text-end"><a href="#">Editar</a></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Nombre</th>
+                                        <th class="text-end">Nombre: </th>
                                         <td>Lucia</td>
+                                        <td class="text-end"><a href="#">Editar</a></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Apellido</th>
-                                        <td colspan="2">Galán</td>
+                                        <th class="text-end">Apellido: </th>
+                                        <td>Galán</td>
+                                        <td class="text-end"><a href="#">Editar</a></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Correo electrónico</th>
-                                        <td colspan="2">luchi_galan@gmail.com</td>
+                                        <th class="text-end">Correo electrónico: </th>
+                                        <td>luchi_galan@gmail.com</td>
+                                        <td class="text-end"><a href="#">Editar</a></td>
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+                        <div class="flex-center-x mg-1">
+                            <button>Cambiar contraseña</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <script src="{{url_for("static", filename="js/modal.js")}}"></script>
+    <script src="../static/js/modal.js"></script>
 </body>
 
 </html>

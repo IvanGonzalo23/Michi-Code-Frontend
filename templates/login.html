@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_login.css') }}">
+    <link rel="stylesheet" href="../static/css/style_login.css">
     <title>Michi Code</title>
 </head>
 <body class="container">
@@ -37,14 +37,14 @@
     <div class="cuadrado">
         <div class="cuerpo">
             <h1>Iniciar sesión</h1>
-            <form method="POST" action="http://127.0.0.1:5000/login">
-                <label class="correo">Correo electrónico o Nombre de usuario</label>
-                <input class="ic" type="text" name="email_username" required>
-                <label class="contrasenia">Contraseña</label>
-                <input class="ci" type="password" name="contrasenia" required>
-                <button type="submit">Confirmar</button>
+            <form method="POST" id="myform">
+                <label for="email_username" class="correo">Correo electrónico o Nombre de usuario</label>
+                <input class="ic" type="text" id="email_username" name="email_username" required>
+                <label for="contrasenia" class="contrasenia">Contraseña</label>
+                <input class="ci" type="password" id="contrasenia" name="contrasenia" required>
+                <button type="submit" id="loginUserButton">Confirmar</button>
             </form>
-            <p>¿No tienes una cuenta? <a class="registrar" href="{{url_for("auth.form")}}">Registrarse</a></p>
+            <p>¿No tienes una cuenta? <a class="registrar" href="form.html">Registrarse</a></p>
         </div>
     </div>
 
@@ -73,5 +73,6 @@
             </li>
         </ul>
     </footer>
+    <script src="../static/js/login.js"></script>
 </body>
 </html>
